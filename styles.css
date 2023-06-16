@@ -20,37 +20,110 @@ img {
 input,
 button,
 textarea {
-    font: inherit; 
+    font: inherit;
 }
 
 /* || VArIABLES */
 
 
 
-    :root {
+:root {
 
-        /* COLOUR PALETTE:  */
-        --COLOR-ONE: #FFA500;
-        --COLOR-TWO: #C8C8C8;
-        --COLOR-THREE: #808080;
-        --COLOR-FOUR: #fff;
-        --COLOR-FIVE: #000;
-    
-        /* FONT FAMILIES */
-    
-        --FONT-FAMILY-TITLE: Cambria, serif;
-        --FONT-FAMILY-H1: Cambria, serif;
-        --FONT-FAMILY-TEXT: Roboto, serif;
-    
+    /* COLOUR PALETTE:  */
+    --COLOR-ONE: #f07575;
+    --COLOR-TWO: #ecc2c2;
+    --COLOR-THREE: #f5d5d5;
+    --COLOR-FOUR: #eca3a3;
+    --COLOR-FIVE: #f7b3b3;
+    --COLOR-SIX: #833434;
+    --COLOR-SEVEN: #333;
+
+
+    --COLOR-TEXT: #4e2020;
+    --COLOR-TEXT2: #fff;
+
+    .dark-mode {
+        --COLOR-ONE: #5a99e2;
+        --COLOR-TWO: #97cceb;
+        --COLOR-THREE: #a3e8f1;
+        --COLOR-FOUR: #a3cbec;
+        --COLOR-FIVE: #c5ebe2;
+        --COLOR-SIX: #7e7cec;
+        --COLOR-SEVEN: #333333;
     }
+}
 
 
 
-  /* || UTILITY CLASSES */
+/* || UTILITY CLASSES */
 
 
 /* ------------------------ */
 
 body {
-    background-color: var(--COLOR-ONE);
+    background-color: var(--COLOR-FOUR);
+}
+
+/* --------HEADER------- */
+/* --------HEADER------- */
+/* --------HEADER------- */
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--COLOR-FIVE);
+    position: relative;
+    display: block;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: var(--COLOR-SEVEN);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a.icon {
+    background: var(--COLOR-TWO);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    background-color: var(--COLOR-SIX);
+    color: var(--COLOR-TEXT2);
+}
+
+#logo {
+    background-color: var(--COLOR-FIVE);
+    color: white;
+    font-size: 2rem;
+}
+
+@media (min-width: 600px) {
+    .topnav #myLinks {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .topnav a.icon {
+        display: none;
+    }
+
+    .topnav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .flex-logo {
+        display: flex;
+        align-items: center;
+    }
 }
